@@ -1,6 +1,6 @@
 # Description:
 
-This repository contains scripts for multiple sequence alignment.
+This repository contains scripts for construct multiple sequence alignment using MUSCLE (MUltiple Sequence Comparison by Log-Expectation).
 
 ## Two Functions:
 

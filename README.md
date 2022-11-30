@@ -1,4 +1,4 @@
 # Description:
 
-This repository contains scripts for mu;tiple sequence alignment.
+This repository contains scripts for multiple sequence alignment.
 

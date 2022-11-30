@@ -14,7 +14,7 @@ def ncbiFastaFilesDownloaderFunc (geneDic):
                       sequence alignment.
       """
       for gene_symbol, gene_id in geneDic.items():
-            ncbi_handle = en.efetch(db= 'nucleotide', id= gene_id, rettype='fasta') # download
+            ncbi_handle = en.efetch(db= 'protein', id= gene_id, rettype='fasta') # download
             record = SeqIO.read(ncbi_handle, 'fasta') # read data
             print("Downloading %s with sequence length %d" % (record.name, len(record.seq)))
             output_name = gene_symbol+'.fasta'
@@ -39,14 +39,13 @@ def fileMergerFunc (dirList, outputFile):
 if __name__ == '__main__':
 
     # Gene symbol and GenBank ID
-    dict={'G3QWX4':'SRLZ01002358.1',
-          'E7F9E5':'CU652893.6',
-          'F7AH40':'QNVO02003165.1',
-          'Q8R0I0':'AL671706.8',
-          'F6WXR7':'AAFR03034356.1',
-          'G1KTF3':'AAWZ02007819.1',
-          'Q56H28':'JAFEKA010000012.1',
-          'Q5RFN1':'NDHI03003400.1'}
+    dict={'E7F9E5':'XP_005169417.1',
+          'F7AH40':'QLF98524.1',
+          'Q8R0I0':'ACT66269.1',
+          'F6WXR7':'XP_007500942.1',
+          'G1KTF3':'XP_008105456.1',
+          'Q56H28':'XP_044906242.1',
+          'Q5RFN1':'XP_024096013.1'}
     ncbiFastaFilesDownloaderFunc(dict)
     fileMergerFunc(os.listdir(),"muscle_input.fasta")
 

@@ -14,11 +14,11 @@ def ncbiFastaFilesDownloaderFunc (geneDic):
                       sequence alignment.
       """
       for gene_symbol, gene_id in geneDic.items():
-            ncbi_handle = en.efetch(db= 'nucleotide', id= gene_id, rettype='fasta')
-            record = SeqIO.read(ncbi_handle, 'fasta')
+            ncbi_handle = en.efetch(db= 'nucleotide', id= gene_id, rettype='fasta') # download
+            record = SeqIO.read(ncbi_handle, 'fasta') # read data
             print("Downloading %s with sequence length %d" % (record.name, len(record.seq)))
             output_name = gene_symbol+'.fasta'
-            SeqIO.write(record, output_name, 'fasta')
+            SeqIO.write(record, output_name, 'fasta') # write data into file
 
 
 def fileMergerFunc (dirList, outputFile):

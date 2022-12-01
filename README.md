@@ -4,7 +4,7 @@ This repository contains scripts for the construction of multiple sequence align
 
 ## Two Functions:
 
-1. **ncbiFastaFilesDownloaderFunc:** will download the fasta sequence data from NCBI' Protein database using sequence accessions. 
-2. **fileMergerFunc:** will merge fasta files into a single file to use as input for Muscle. 
+1. **ncbiFastaFilesDownloaderFunc:** used to download the fasta sequence data from NCBI' Protein database using sequence accessions. 
+2. **fileMergerFunc:** used to merge fasta files into a single file as input for Muscle. 
 
 
